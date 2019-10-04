@@ -1,4 +1,4 @@
-
+import { getWeekNumber } from 'arvidvdc.github.io/SARgE_lib.js';
 /*
 function getWeekNumber(d) {
     // Copy date so don't modify original
@@ -19,5 +19,5 @@ function createCurrentWeekmenu() {
     var weekNumber = getWeekNumber(new Date());
     var linkie = document.createElement('a');
     var linkText = document.createTextNode('Bekijken week ' + weekNumber[1]);
-
+    console.log(linkText)
 }
