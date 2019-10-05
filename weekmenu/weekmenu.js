@@ -1,5 +1,3 @@
-import { getWeekNumber } from 'arvidvdc.github.io/SARgE_lib.js';
-/*
 function getWeekNumber(d) {
     // Copy date so don't modify original
     d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
@@ -13,11 +11,14 @@ function getWeekNumber(d) {
     // Return array of year and week number
     return [d.getUTCFullYear(), weekNo];
 }
-*/
 
 function createCurrentWeekmenu() {
     var weekNumber = getWeekNumber(new Date());
     var linkie = document.createElement('a');
     var linkText = document.createTextNode('Bekijken week ' + weekNumber[1]);
-    console.log(linkText)
+    
+    linkie.appendChild(linkText);
+    linkie.setAttribute('href', 'week'+weekNumber[0]+weekNumber[1]+'.html');
+    //linkie.href=('week'+weekNumber[0]+weekNumber[1]+'.html');
+    document.body.appendChild(linkie);
 }
