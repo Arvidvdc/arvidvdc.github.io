@@ -12,6 +12,10 @@ function getWeekNumber(d) {
     return [d.getUTCFullYear(), weekNo];
 }
 
+function createBoe() {
+    
+}
+
 function createCurrentWeekmenu() {
     var weekNumber = getWeekNumber(new Date());
     var linkie = document.createElement('a');
